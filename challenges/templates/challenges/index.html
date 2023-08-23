@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+    {% block page_title %}
+    All Challenges
+    {% endblock %}
+
+    {% block content %}
+    {% include "challenges/includes/header.html" %}
+        <ul>
+            {% for month in months %}
+            {% comment %} <li><a href="/challenges/{{ month }}">{{ month|title }}</li> outra forma de direcionar os links {% endcomment %}
+            <button><a href="{% url "month-challenge" month %}">{{ month|title }}</button>
+            {% endfor %}
+        </ul>
+    {% endblock %}

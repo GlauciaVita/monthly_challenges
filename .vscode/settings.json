@@ -1,0 +1,13 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "black",
+    "workbench.editor.untitled.hint": "hidden",
+    "[json]": {
+        "editor.defaultFormatter": null
+    },
+    "editor.defaultFormatter":"batisteo.vscode-django"
+    
+}
