@@ -1,5 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/challenge.css" %}">
+    <link rel="stylesheet" href="{% static "challenges/includes/header.css" %}">
+{% endblock%}
 
     {% block page_title %}
     {{ paragraph|title }}
@@ -8,10 +13,10 @@
     {% block content %}
         {% include "challenges/includes/header.html" %}
 
-        <h1 style="color:blue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color:lightsteelblue;">{{ paragraph|title }}</h1>
+        <h1 >{{ paragraph|title }}</h1>
         {% if text is not None %}
-            <h2 style="color:cornflowerblue; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">{{ text  }}</h2>
+            <h2 >{{ text  }}</h2>
         {% else  %}
-            <p style="color:cornflowerblue; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">There is no challenge for this month yet!</p>
+            <p class="fallback" >There is no challenge for this month yet!</p>
         {% endif %}
     {% endblock %}

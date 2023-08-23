@@ -1,0 +1,22 @@
+h1,
+h2 {
+    text-align: center;
+    color:aliceblue;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(236, 104, 130);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.fallback {
+    text-align: center;
+    color: aliceblue;
+}

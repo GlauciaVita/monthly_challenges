@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/index.css" %}">
+    <link rel="stylesheet" href="{% static "challenges/includes/header.css" %}">
+{% endblock%}
 
     {% block page_title %}
     All Challenges
@@ -9,7 +15,7 @@
         <ul>
             {% for month in months %}
             {% comment %} <li><a href="/challenges/{{ month }}">{{ month|title }}</li> outra forma de direcionar os links {% endcomment %}
-            <button><a href="{% url "month-challenge" month %}">{{ month|title }}</button>
+            <li><a href="{% url "month-challenge" month %}">{{ month|title }}</li>
             {% endfor %}
         </ul>
     {% endblock %}
