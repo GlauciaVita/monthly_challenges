@@ -19,4 +19,5 @@ h2 {
 .fallback {
     text-align: center;
     color: aliceblue;
+    font-size: 1.5rem;
 }
